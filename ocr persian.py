@@ -35,30 +35,4 @@ for i, image in enumerate(images):
 # Save the Word document
 doc.save('output.docx')
 
-import chardet
-file = input( 'آدرس فایل را وارد کنید ')
-with open(file, 'rb') as f:
-    lines = f.readlines()
-
-with open(file, 'w', encoding='utf-8') as f:
-    for line in lines:
-        # Split the line into words
-        words = line.strip().split()
-
-        # Reverse the order of the words
-        words = words[::-1]
-
-        # Join the reversed words back into a string
-        reversed_line = ' '.join(words)
-
-        # Write the reversed line to the output file
-        f.write(reversed_line + '\n')
-        # Reverse the order of the words
-        words = words[::-1]
-
-        # Join the reversed words back into a string
-        reversed_line = ' '.join(words)
-
-        # Write the reversed line to the output file
-        f.write(reversed_line + '\n')
 
